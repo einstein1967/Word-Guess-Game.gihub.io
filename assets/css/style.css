@@ -1,0 +1,26 @@
+header {
+    width: 600px;
+    background: lightblue;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.main {
+    font-size: 18px;
+    border: 2px solid #777;
+    width: 63%;
+    float: left;
+}
+
+.hang-img {
+    margin: 0 auto;
+}
+
+.box {
+    border: 2px solid #777;
+    position: relative;
+    height: 60px;
+}
+
+.output {
+}

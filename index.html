@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangmag Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/js" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <header>
+        <h2>Let's play hangman! Pick a letter to start.</h2>
+    </header>
+
+    <br><br><br>
+
+    <script src="assets/javascript/game.js"></script>
+
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <div class="hang-img">
+                        <img src="assets/images/0.jpg">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="output box">
+                                <script> document.write(outputArray); </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                    <div class="col-md-12">
+                        <div class="output box">
+                            <!-- <script> document.write(alphaArray)</script> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+
+
+</body>
+
+</html>
