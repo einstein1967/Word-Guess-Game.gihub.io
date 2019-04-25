@@ -2,7 +2,9 @@ header {
     width: 600px;
     background: lightblue;
     text-align: center;
-    margin-left: 50px;
+    margin: 0 auto;
+    position: relative;
+    right: 40px;
 }
 
 .main {
@@ -12,15 +14,25 @@ header {
     float: left;
 }
 
-.hang-img {
-    margin: 0 auto;
+.output-box {
+    /* border: 2px solid #777; */
+    height: 175px;
+    width: 100%;
 }
 
-.box {
+/* .alpha-box {
     border: 2px solid #777;
-    position: relative;
-    height: 60px;
+    height: 175px;
+    width: 100%;
+} */
+
+.box-text {
+    padding-top: 30px;
+    width: 100%;
 }
 
-.output {
+.the-end {
+    /* width: 100%; */
+    text-align: center;
+    margin-top: 20px;
 }

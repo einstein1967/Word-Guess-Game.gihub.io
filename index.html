@@ -6,7 +6,7 @@
     <title>Hangmag Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/js" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -24,34 +24,43 @@
     <script src="assets/javascript/game.js"></script>
 
     <div class="container">
-        <div class="main">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-3">
-                    <div class="hang-img">
-                        <img src="assets/images/0.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="row">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <img id="graphic" src="assets/images/0.jpg">
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    <div class="output-box main">
                         <div class="col-md-12">
-                            <div class="output box">
-                                <script> document.write(outputArray); </script>
+                            <div id="output" class="box-text">
+                                <div><span id="current"></span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="row"></div>
-                    <div class="col-md-12">
-                        <div class="output box">
-                            <!-- <script> document.write(alphaArray)</script> -->
+                    <div class="output-box main">
+                        <div class="col-md-12">
+                            <div id="alpha" class="box-text">
+                                <div>Used: <span id="used"></span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-5"></div>
-        </div>
-
+            <div class="col-md-4"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="the-end">
+                        <h3><span id="result">Hello</span></h3>
+                        <h3><a href="index.html">Click here </a>to play again.</h3>
+                    </div>
+                </div>
+            </div>
 
 </body>
+
+<footer>
+
+</footer>
 
 </html>
