@@ -5,6 +5,11 @@ header {
     margin: 0 auto;
     position: relative;
     right: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#graphic {
+
 }
 
 .main {
@@ -18,6 +23,7 @@ header {
     /* border: 2px solid #777; */
     height: 175px;
     width: 100%;
+    background-color: white;
 }
 
 /* .alpha-box {
@@ -32,7 +38,8 @@ header {
 }
 
 .the-end {
-    /* width: 100%; */
+    background-color: white;
     text-align: center;
     margin-top: 20px;
 }
+
