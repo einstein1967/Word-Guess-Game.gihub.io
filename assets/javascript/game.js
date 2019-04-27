@@ -15,6 +15,14 @@ $(document).ready(function () {
 
     // Create array from random word.
     var lettersArray = randomWord.split("");
+
+    var printArray = function(array){
+        var returnString = "";
+        for(var i=0; i < array.length; i++){
+            returnString += array[i].trim() + " ";
+        }
+        return returnString;
+    }
     console.log("random word is " + lettersArray);
 
     $("#playAgain").hide();
@@ -36,8 +44,12 @@ $(document).ready(function () {
 
         nogo = 0;
 
+        console.log("array length:" + alphaArray.length);
+
         // Makes sure letter hasn't already been used.
         for (var i = 0; i < alphaArray.length; i++) {
+            userGuess = userGuess.trim();
+            alphaArray[i] = alphaArray[i].trim();
             if (userGuess === alphaArray[i]) {
                 return;
             }
@@ -66,7 +78,7 @@ $(document).ready(function () {
         $("#graphic").attr("src", imageArray[lose]);
 
         $("#current").text(outputArray).addClass("box-text");
-        $("#used").text(alphaArray).addClass("box-text");
+        $("#used").text(printArray(alphaArray)).addClass("box-text");
 
 
         if (lose === 10) {
