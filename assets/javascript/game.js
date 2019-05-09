@@ -8,6 +8,7 @@ var win = 0;
 var lose = 0;
 var nogo = 0;
 var result = "";
+
 $(document).ready(function () {
 
     // Choose random word from array.
