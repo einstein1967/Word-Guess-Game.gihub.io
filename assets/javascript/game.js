@@ -3,6 +3,7 @@ var wordArray = ["SHADE", "CURVE", "STORE", "PARK", "CLEAR", "MOVE", "AMBIENT", 
 var imageArray = ["assets/images/0.jpg", "assets/images/1.jpg", "assets/images/2.jpg", "assets/images/3.jpg", "assets/images/4.jpg", "assets/images/5.jpg", "assets/images/6.jpg", "assets/images/7.jpg", "assets/images/8.jpg", "assets/images/9.jpg", "assets/images/10.jpg"];
 var alphaArray = [];
 var outputArray = [];
+var wordLine = "";
 var alpha = 0;
 var win = 0;
 var lose = 3;
@@ -17,9 +18,9 @@ $(document).ready(function () {
     // Create array from random word.
     var lettersArray = randomWord.split("");
 
-    var printArray = function(array){
+    var printArray = function (array) {
         var returnString = "";
-        for(var i=0; i < array.length; i++){
+        for (var i = 0; i < array.length; i++) {
             returnString += array[i].trim() + " ";
         }
         return returnString;
@@ -31,11 +32,12 @@ $(document).ready(function () {
 
     // Create the word grid the user sees.
     for (var i = 0; i < lettersArray.length; i++) {
-        outputArray[i] = "_";
+        outputArray[i] = " _";
+        wordLine += outputArray[i];
     }
 
     console.log(outputArray);
-    $("#current").text(outputArray).addClass("box-text");
+    $("#current").text(wordLine).addClass("box-text");
     $("#used").text(alphaArray).addClass("box-text");
 
     // // Main game event.
@@ -75,22 +77,25 @@ $(document).ready(function () {
             lose++;
         }
 
-        // console.log("wrong guess total = " + lose);
         $("#graphic").attr("src", imageArray[lose]);
+        wordLine = "";
+        for (var i = 0; i < lettersArray.length; i++) {
+            wordLine += outputArray[i];
+        }
 
-        $("#current").text(outputArray).addClass("box-text");
+        $("#current").text(wordLine).addClass("box-text");
         $("#used").text(printArray(alphaArray)).addClass("box-text");
 
 
         if (lose === 10) {
-            $("#result").text("And the crowd was right.");
+            $("#result").text("Guess the pressure got to you.");
             $("#playAgain").show();
 
             // How do I stop the event?
         }
 
         if (win === lettersArray.length) {
-            $("#result").text("You won!");
+            $("#result").text("Cool under pressure.");
             $("#playAgain").show();
 
             // How do I stop the event?

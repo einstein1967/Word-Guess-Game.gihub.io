@@ -43,23 +43,25 @@ header {
     margin: 0 auto;
     position: relative;
     bottom: 30px;
-    /* background-image: url("../images/large-crowd.jpg"); */
 }
 
-.output-box {
+.output-box1,
+.output-box2 {
     border: 2px solid #777;
     height: 175px;
     width: 100%;
-    background-color: white;
     margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
 }
 
 .box-text {
-    padding-top: 30px;
+    padding-top: 20px;
     width: 100%;
 }
 
 .the-end {
+    padding-top: 164px;
     background-color: white;
     text-align: center;
     margin-top: 20px;
