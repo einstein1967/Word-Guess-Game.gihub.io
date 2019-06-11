@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body background="assets/images/large-crowd.jpg" ;>
+
+    <header>
+        <h2>Let's play hangman! Pick a letter to start.</h2>
+        <h2>Just ignore the crowd watching you.</h2>
+    </header>
+
+    <br><br><br>
+
+    <script src="assets/javascript/game.js"></script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="frame">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="col-md-3">
+                                <img id="graphic" src="assets/images/3.jpg">
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row">
+                                    <div class="output-box main">
+                                        <div class="col-md-12">
+                                            <div id="output" class="box-text">
+                                                <div><span id="current"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="output-box main">
+                                        <div class="col-md-12">
+                                            <div id="alpha" class="box-text">
+                                                <div>Used: <span id="used"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="the-end">
+                                        <h3><span id="result"></span></h3>
+                                        <h3 id="playAgain"><a href="index.html">Click here </a>to play again.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>

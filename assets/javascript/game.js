@@ -5,8 +5,8 @@ var alphaArray = [];
 var outputArray = [];
 var alpha = 0;
 var win = 0;
-var lose = 0;
-var nogo = 0;
+var lose = 3;
+var nogo = 3;
 var result = "";
 
 $(document).ready(function () {
