@@ -1,10 +1,10 @@
 // Initiate arrays and variables.
 var wordArray = ["SHADE", "CURVE", "STORE", "PARK", "CLEAR", "MOVE", "AMBIENT", "BRAZEN", "REMOTE", "DUSTY"];
 var imageArray = ["assets/images/0.jpg", "assets/images/1.jpg", "assets/images/2.jpg", "assets/images/3.jpg", "assets/images/4.jpg", "assets/images/5.jpg", "assets/images/6.jpg", "assets/images/7.jpg", "assets/images/8.jpg", "assets/images/9.jpg", "assets/images/10.jpg"];
+var checkAlpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var alphaArray = [];
 var outputArray = [];
 var wordLine = "";
-var alpha = 0;
 var win = 0;
 var lose = 3;
 var nogo = 3;
@@ -44,6 +44,9 @@ $(document).ready(function () {
 
     document.onkeyup = function (event) {
         var userGuess = event.key.toUpperCase();
+        if (!checkAlpha.includes(userGuess)) {
+            return;
+        }
 
         nogo = 0;
 
@@ -57,6 +60,7 @@ $(document).ready(function () {
                 return;
             }
         }
+
 
         alphaArray.push(" " + userGuess);
         console.log(alphaArray);
@@ -95,11 +99,10 @@ $(document).ready(function () {
         }
 
         if (win === lettersArray.length) {
-            $("#result").text("Cool under pressure.");
+            $("#result").text("Nicely done!");
             $("#playAgain").show();
 
             // How do I stop the event?
         }
     }
-
 });
