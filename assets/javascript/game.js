@@ -92,6 +92,7 @@ $(document).ready(function () {
 
 
         if (lose === 10) {
+            alert("all done")
             $("#result").text("Guess the pressure got to you.");
             $("#playAgain").show();
 
